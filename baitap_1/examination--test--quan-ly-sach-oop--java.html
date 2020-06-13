@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>GokiSoft - Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java</title>
+<meta name="description" content="Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+
+<meta property="og:url" content="http://gokisoft.com/examination--test--quan-ly-sach-oop--java.html" />
+<meta property="article:author" content="http://gokisoft.com/examination--test--quan-ly-sach-oop--java.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java" />
+<meta property="og:description" content="Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java" />
+<meta property="og:image" content="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" />
+<meta property="og:locale" content="vi_VN" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java" />
+<meta name="twitter:image:src" content="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" />
+<meta name="twitter:description" content="Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java" />
+<meta name="google-site-verification" content="owoQMlqWmrnzN1_p5GvjIDrNvxyWE72ujK-WaN4wCUY" />
+<script data-ad-client="ca-pub-7242961778697092" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/gokisoft-com/image/upload/v1553571154/ico_copy_uhtlfa.png" />
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/vendor/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/fonts/fontawesome-5.0.8/css/fontawesome-all.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/fonts/iconic/css/material-design-iconic-font.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/vendor/animate/animate.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/vendor/css-hamburgers/hamburgers.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/vendor/animsition/css/animsition.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/css/util.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://gokisoft.com/themes/gokisoft/css/main.css">
+
+<link href="https://gokisoft.com/themes/gokisoft-old/lib/rainbow/themes/css/monokai.css" rel="stylesheet" type="text/css" media="screen">
+
+<style type="text/css">
+    #description img {
+        width: 100% !important;
+        cursor: pointer;
+    }
+
+    .float{
+      position:fixed;
+      width:50px;
+      height:50px;
+      bottom:20px;
+      right:20px;
+      background-color:#0C9;
+      color:#FFF;
+      border-radius:50px;
+      text-align:center;
+      box-shadow: 2px 2px 3px #999;
+    }
+
+    .my-float{
+      margin-top:17px;
+    }
+</style>
+<style type="text/css">
+.user-image {
+    float: left;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -2px
+}
+  /* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    /*min-width: 250px;*/ /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #979899; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes  fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes  fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+pre {
+    margin-top: 5px !important;
+}
+</style>
+<link rel="stylesheet" href="https://gokisoft.com/css/vendor/summernote.css">
+<style type="text/css">
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99999999999;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media  screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+
+<header>
+
+<div class="container-menu-desktop">
+<div class="topbar">
+<div class="content-topbar container h-100">
+<div class="left-topbar">
+<a href="https://gokisoft.com/editor" class="left-topbar-item" target="_blank">
+Ghi Chú
+</a>
+<a href="https://web.gokisoft.com" class="left-topbar-item" target="_blank">
+Thiết Kế Web
+</a>
+<a href="https://gokisoft.com/login" class="left-topbar-item" style="color: yellow; font-weight: bold;" target="_blank">
+My CV
+</a>
+<a href="https://gokisoft.com/lien-he" class="left-topbar-item">
+Liên Hệ
+</a>
+<a href="https://gokisoft.com/members" class="left-topbar-item">
+Học Viên Tích Cực
+</a>
+<a href="https://gokisoft.com/ung-ho--tai-tro-de-gokisoft-co-the-ra-that-nhieu-khoa-hoc--chia-se-nhieu-kien-thuc-hon-nua-vi-cong-dong.html" class="left-topbar-item" style="color: #36f506; display: none;">
+Ủng Hộ
+</a>
+<a href="https://gokisoft.com/login" class="left-topbar-item">
+Đăng Nhập
+</a>
+</div>
+<div class="right-topbar">
+<a href="https://www.facebook.com/groups/devAZ/" target="_blank">
+<span class="fab fa-facebook-f"></span>
+</a>
+<a href="#">
+<span class="fab fa-twitter"></span>
+</a>
+<a href="#">
+<span class="fab fa-pinterest-p"></span>
+</a>
+<a href="#">
+<span class="fab fa-vimeo-v"></span>
+</a>
+<a href="https://www.youtube.com/channel/UCd8aIzwdaoQ_Abp3frmeZSA?sub_confirmation=1" target="_blank">
+<img src="https://image.flaticon.com/icons/svg/1384/1384060.svg" style="max-height: 35px">
+</a>
+</div>
+</div>
+</div>
+
+<div class="wrap-header-mobile">
+
+<div class="logo-mobile">
+<a href="https://gokisoft.com"><img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1587623413/qhwncq3wtjkrsyke6ayw.png" alt="IMG-LOGO"></a>
+</div>
+
+<div class="btn-show-menu-mobile hamburger hamburger--squeeze m-r--8">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</div>
+</div>
+
+<div class="menu-mobile">
+<ul class="topbar-mobile">
+<li class="left-topbar">
+<a href="https://gokisoft.com" class="left-topbar-item">
+Học Lập Trình Từ A - Z (HTML/CSS/JS - Bootstrap/JQuery - AngularJS - PHP/Laravel - Java v.v)
+</a>
+</li>
+<li class="right-topbar">
+<a href="https://learning.gokisoft.com/admin" class="left-topbar-item">
+Đăng Nhập
+</a>
+<a href="#">
+<span class="fab fa-facebook-f"></span>
+</a>
+<a href="#">
+<span class="fab fa-twitter"></span>
+</a>
+<a href="#">
+<span class="fab fa-pinterest-p"></span>
+</a>
+<a href="#">
+<span class="fab fa-vimeo-v"></span>
+</a>
+<a href="#">
+<span class="fab fa-youtube"></span>
+</a>
+</li>
+</ul>
+<ul class="main-menu-m">
+<li>
+<a href="https://gokisoft.com">Trang Chủ</a>
+</li>
+<li>
+<a href="https://gokisoft.com/lap-trinh-c.htm">Lập Trình C</a>
+</li>
+<li>
+<a href="#frontend">Frontend</a>
+<ul class="sub-menu-m">
+<li><a href="https://gokisoft.com/hoc-html5-css3.htm">Học HTML5 - CSS3</a></li>
+<li><a href="https://gokisoft.com/hoc-bootstrap.htm">Học Bootstrap</a></li>
+<li><a href="https://gokisoft.com/hoc-js.htm">Học JS</a></li>
+<li><a href="https://gokisoft.com/hoc-jquery.htm">Học JQuery</a></li>
+</ul>
+<span class="arrow-main-menu-m">
+<i class="fa fa-angle-right" aria-hidden="true"></i>
+</span>
+</li>
+<li>
+<a href="#backend">Backend</a>
+<ul class="sub-menu-m">
+<li><a href="https://gokisoft.com/hoc-php.htm">Học PHP</a></li>
+<li><a href="https://gokisoft.com/hoc-laravel.htm">Học Laravel</a></li>
+</ul>
+<span class="arrow-main-menu-m">
+<i class="fa fa-angle-right" aria-hidden="true"></i>
+</span>
+</li>
+<li>
+<a href="#java">Java</a>
+<ul class="sub-menu-m">
+<li><a href="https://gokisoft.com/java-basic.htm">Java Basic</a></li>
+<li><a href="https://gokisoft.com/java-advanced.htm">Java Advanced</a></li>
+<li><a href="https://gokisoft.com/java-web-ejb-ead.htm">Java Web + EJB (EAD)</a></li>
+<li><a href="https://gokisoft.com/java-web-webservice.htm">Java Web + WebService</a></li>
+<li><a href="https://gokisoft.com/java-web-ea.htm">Java Web + EA</a></li>
+</ul>
+<span class="arrow-main-menu-m">
+<i class="fa fa-angle-right" aria-hidden="true"></i>
+</span>
+</li>
+<li>
+<a href="https://gokisoft.com/android.htm">Android</a>
+</li>
+<li>
+<a href="#tools">Tools</a>
+<ul class="sub-menu-m">
+<li><a href="https://gokisoft.com/git-github.htm">Git/Github</a></li>
+</ul>
+<span class="arrow-main-menu-m">
+<i class="fa fa-angle-right" aria-hidden="true"></i>
+</span>
+</li>
+<li>
+<a href="#khac">Khác</a>
+<ul class="sub-menu-m">
+<li><a href="https://gokisoft.com/projects.htm">Projects</a></li>
+<li><a href="https://gokisoft.com/chia-se-cntt.htm">Chia Sẻ CNTT</a></li>
+<li><a href="https://gokisoft.com/c-sharp.htm">C Sharp</a></li>
+<li><a href="https://gokisoft.com/sql.htm">SQL</a></li>
+</ul>
+<span class="arrow-main-menu-m">
+<i class="fa fa-angle-right" aria-hidden="true"></i>
+</span>
+</li>
+</ul>
+</div>
+
+<div class="wrap-logo container">
+
+<div class="logo">
+<a href="https://gokisoft.com"><img style="height: 65px !important;" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1587623413/qhwncq3wtjkrsyke6ayw.png" alt="LOGO"></a>
+</div>
+
+<div class="banner-header">
+<a href="https://www.facebook.com/groups/devAZ/" target="_blank"><img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1586438291/jc6lmsuhejpdutjs8v89.png" alt="Học Lập Trình Từ A - Z (HTML/CSS/JS - Bootstrap/JQuery - AngularJS - PHP/Laravel - Java v.v)"></a>
+</div>
+</div>
+
+<div class="wrap-main-nav">
+<div class="main-nav">
+
+<nav class="menu-desktop">
+<a class="logo-stick" href="https://gokisoft.com">
+<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1587623413/qhwncq3wtjkrsyke6ayw.png" alt="LOGO">
+</a>
+<ul class="main-menu">
+<li>
+<a href="https://gokisoft.com">Trang Chủ</a>
+</li>
+<li class="main-menu">
+<a href="https://gokisoft.com/lap-trinh-c.htm">Lập Trình C</a>
+</li>
+<li>
+<a href="#frontend">Frontend</a>
+<ul class="sub-menu">
+<li><a href="https://gokisoft.com/hoc-html5-css3.htm">Học HTML5 - CSS3</a></li>
+<li><a href="https://gokisoft.com/hoc-bootstrap.htm">Học Bootstrap</a></li>
+<li><a href="https://gokisoft.com/hoc-js.htm">Học JS</a></li>
+<li><a href="https://gokisoft.com/hoc-jquery.htm">Học JQuery</a></li>
+</ul>
+</li>
+<li>
+<a href="#backend">Backend</a>
+<ul class="sub-menu">
+<li><a href="https://gokisoft.com/hoc-php.htm">Học PHP</a></li>
+<li><a href="https://gokisoft.com/hoc-laravel.htm">Học Laravel</a></li>
+</ul>
+</li>
+<li>
+<a href="#java">Java</a>
+<ul class="sub-menu">
+<li><a href="https://gokisoft.com/java-basic.htm">Java Basic</a></li>
+<li><a href="https://gokisoft.com/java-advanced.htm">Java Advanced</a></li>
+<li><a href="https://gokisoft.com/java-web-ejb-ead.htm">Java Web + EJB (EAD)</a></li>
+<li><a href="https://gokisoft.com/java-web-webservice.htm">Java Web + WebService</a></li>
+<li><a href="https://gokisoft.com/java-web-ea.htm">Java Web + EA</a></li>
+</ul>
+</li>
+<li class="main-menu">
+<a href="https://gokisoft.com/android.htm">Android</a>
+</li>
+<li>
+<a href="#tools">Tools</a>
+<ul class="sub-menu">
+<li><a href="https://gokisoft.com/git-github.htm">Git/Github</a></li>
+</ul>
+</li>
+<li>
+<a href="#khac">Khác</a>
+ <ul class="sub-menu">
+<li><a href="https://gokisoft.com/projects.htm">Projects</a></li>
+<li><a href="https://gokisoft.com/chia-se-cntt.htm">Chia Sẻ CNTT</a></li>
+<li><a href="https://gokisoft.com/c-sharp.htm">C Sharp</a></li>
+<li><a href="https://gokisoft.com/sql.htm">SQL</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="headline bg0 flex-wr-sb-c p-rl-20 p-tb-8">
+<div class="f2-s-1 p-r-30 m-tb-6">
+<a href="https://gokisoft.com" class="breadcrumb-item f1-s-3 cl9">
+Trang Chủ
+</a>
+<a href="https://gokisoft.com/tin-tuc" class="breadcrumb-item f1-s-3 cl9">
+Chủ Đề
+</a>
+<span class="breadcrumb-item f1-s-3 cl9">
+Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java
+</span>
+</div>
+<form method="GET" action="https://www.google.com.vn/search" target="_blank" onsubmit="jQuery('#q').val('site:gokisoft.com ' + jQuery('#s_tmp').val())">
+<div class="pos-relative size-a-2 bo-1-rad-22 of-hidden bocl11 m-tb-6">
+<input class="f1-s-1 cl6 plh9 s-full p-l-25 p-r-45" type="text" id="s_tmp" placeholder="Tìm kiếm">
+<input type="text" name="q" id="q" style="display: none;">
+<button type="submit" class="flex-c-c size-a-1 ab-t-r fs-20 cl2 hov-cl10 trans-03">
+<i class="zmdi zmdi-search"></i>
+</button>
+</div>
+</form> </div>
+</div>
+<div id="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="https://gokisoft.com/java-basic-test-30-phut-lap-trinh-huong-doi-tuong-java.html" style="font-size: 14pt !important;">1) Java basic- Test 30 phút - Lập trình hướng đối tượng java</a>
+<a href="https://gokisoft.com/java-basic-test-60-phut-tong-hop-kien-thuc-java-can-ban.html" style="font-size: 14pt !important;">2) Java basic- Test 60 phút - tổng hợp kiến thức java căn bản</a>
+<a href="https://gokisoft.com/java-basic-assignment-quan-ly-xe-co.html" style="font-size: 14pt !important;">3) Java basic- Assignment - Quản lý xe cộ</a>
+<a href="https://gokisoft.com/java-basic-assignment-quan-ly-nha.html" style="font-size: 14pt !important;">4) Java basic- Assignment - Quản lý nhà</a>
+<a href="https://gokisoft.com/java-basic-assignment-quan-ly-sach.html" style="font-size: 14pt !important;">5) Java basic- Assignment - Quản lý sách</a>
+<a href="https://gokisoft.com/java-basic-test-60-phut-lap-trinh-java-can-ban-phan-mem-quan-ly-benh-nhan-covid-19-2020-tooang.html" style="font-size: 14pt !important;">6) Java Basic- Test 60 phút lập trình java căn bản - Phần mềm quản lý bệnh nhân COVID-19 (2020 - TOOANG)</a>
+<a href="https://gokisoft.com/test-chuong-trinh-quan-ly-rap-chieu-film-bang-java.html" style="font-size: 14pt !important;">7) TEST- Chương trình quản lý rạp chiếu film bằng java</a>
+<a href="https://gokisoft.com/test-tim-kiem-chuoi-trong-chuoi.html" style="font-size: 14pt !important;">8) Test - Tìm kiếm chuỗi trong chuỗi</a>
+<a href="https://gokisoft.com/examination--test--oop--da-hinh-trong-java-hinh-chu-nhat-hinh-tron.html" style="font-size: 14pt !important;">9) Examination &amp; Test &gt;&gt; OOP + Đa hình trong java - hình chữ nhật - Hình tròn</a>
+<a href="https://gokisoft.com/examination--test--quan-ly-sach-oop--java.html" style="font-size: 14pt !important; color: red">10. Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java</a>
+<a href="https://gokisoft.com/examination--test--quan-ly-hource-trong-java.html" style="font-size: 14pt !important;">11) Examination &amp; Test &gt;&gt; Quản lý Hource trong Java</a>
+<a href="https://gokisoft.com/examination--test--quan-ly-xe-tren-cac-dia-ban--java-basic.html" style="font-size: 14pt !important;">12) Examination &amp; Test &gt;&gt; Quản lý xe trên các địa bạn + java basic</a>
+<a href="https://gokisoft.com/examination--testexa--interface-trong-java--java-basic.html" style="font-size: 14pt !important;">13) Examination &amp; TestExa &gt;&gt; Interface trong java &gt;&gt; Java basic</a>
+</div>
+<span style="font-size:30px;cursor:pointer;position: fixed; top: 40%; left: 15px;" onclick="openNav()">&#9776;
+</span>
+<section class="bg0 p-b-140 p-t-10" id="description">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-10 col-lg-8 p-b-30">
+<div class="p-r-10 p-r-0-sr991">
+
+<div class="p-b-70">
+<h3 class="f1-l-3 cl2 p-b-16 p-t-33 respon2">
+Examination &amp; Test &gt;&gt; Quản lý sách OOP + Java <g:sharetoclassroom url="https://gokisoft.com/examination--test--quan-ly-sach-oop--java.html" size="32"></g:sharetoclassroom>
+</h3>
+<div class="flex-wr-s-s p-b-40">
+<span class="f1-s-3 cl8 m-r-15">
+<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
+by TRẦN VĂN ĐIỆP
+</a>
+<span class="m-rl-3">-</span>
+<span>
+20:02 01/04/2020
+</span>
+</span>
+<span class="f1-s-3 cl8 m-r-15">
+1,381 Lượt Xem
+</span>
+</div>
+<style type="text/css">
+							p img {
+								width: 100% !important;
+							}
+						</style>
+<div id="menu_post_div" style="display: none; background: #ecebeb; padding: 15px;">
+<h1 style="font-weight: bold; text-transform: uppercase; font-size: 14pt;">Menu Bài Viết:</h1>
+<ul id="menu_post">
+</ul>
+</div> <p class="f1-s-11 cl6 p-b-15" id="description_main">
+<label style="color: grey; font-weight: bold;">Short URL: <a href="https://gokisoft.com/1136">https://gokisoft.com/1136</a></label>
+<p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Xây dựng menu chương trình như sau.</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Menu :</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">1. Nhập thông tin sách</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">2. Hiển thị tất cả sách ra màn hình</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">3. Nhập thông tin tác giả</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">4. Tìm kiếm tất cả sách được viết bởi tác giả</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">5. Thoát</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Choose : ???</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Yêu cầu :</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Thiết kế lớp đối tượng tác giả gồm các thuộc tính sau (Tên, tuổi, bút danh, ngày sinh, quê quán)&nbsp;</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">- Chú ý : cài đặt tất cả các thuộc tính chỉ có thuộc tính đọc dữ liệu</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">- Tạo các hàm tạo ko đối và đầy đủ đối số</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">- Tạo phương thức nhập thông tin tác giả, và xem thông tin tác giả</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">- Chú ý : Mỗi tác giả có bút danh duy nhất, ko được phép nhập trùng lặp tên bút danh của tác giả<br></p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Thiết kế lớp book gồm các thuộc tín : Tên sách, ngày xuất bản, but danh</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">- Cài đặt get/set cho các thuộc tính, hàm tạo ko đối và đầy đủ tham số</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">- Tạo hàm nhập và xem thông tin sách</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">- Chú ý : Khi nhập tên bút danh của tác giả, nếu chưa tồn tại thì -&gt; Xuất hiện màn hình nhập thông tin cho tác giả đó luôn.</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Xây dựng từng chức năng chương trình</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Khi người dùng chọn 1 : Hỏi người dùng nhập số sách cần thêm -&gt; sau đó nhập thông tin cho từng quấn sách -&gt; và lưa vào 1 list.</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Khi người dùng chọn 2 : In tất cả thông tin quấn sách.</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Khi người dùng chon 3 : Hỏi người dùng nhập số tác giả -&gt; Nhập thông tin tác giả.</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Khi người dùng chọn 4 : Hiển thị màn hình nhập bút danh cần tìm -&gt; in ra quấn sach của tác giả đó</p><p style="margin-top: 20px; margin-bottom: 20px; padding: 0px 15px; color: rgb(33, 37, 41); font-size: 16px;">Khi người dùng chọn 5 : Thoát chương trình.</p>
+</p>
+<p>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7242961778697092" data-ad-slot="3026237021"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+<div class="f1-s-11 cl6 p-b-25" style="border-left: solid 3px green; padding-left: 8px; background-color: #f7f7f7; margin-top: 20px">
+<p style="font-weight: bold;">Theo dõi cập nhật nội dung học trên Youtube</p>
+<br />
+<script src="https://apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCd8aIzwdaoQ_Abp3frmeZSA" data-layout="full" data-count="default"></div>
+</div>
+
+<div class="flex-s-s p-t-12 p-b-15">
+<span class="f1-s-12 cl5 m-r-8">
+Tags:
+</span>
+<div class="flex-wr-s-s size-w-0">
+<a href="https://gokisoft.com/tag/C1907L" class="f1-s-12 cl8 hov-link1 m-r-15" title="C1907L">
+C1907L
+</a>
+<a href="https://gokisoft.com/tag/T1907A" class="f1-s-12 cl8 hov-link1 m-r-15" title="T1907A">
+T1907A
+</a>
+<a href="https://gokisoft.com/tag/JavaFree" class="f1-s-12 cl8 hov-link1 m-r-15" title="JavaFree">
+JavaFree
+</a>
+<a href="https://gokisoft.com/tag/09-Examination-&amp;-Test" class="f1-s-12 cl8 hov-link1 m-r-15" title="09. Examination &amp; Test">
+09. Examination &amp; Test
+</a>
+<a href="#more" onclick="$('.quick_setting_class').toggle()">More</a>
+</div>
+</div>
+</div>
+
+<div>
+<h4 class="f1-l-4 cl3 p-b-12">
+Bình luận
+</h4>
+<div class="sharethis-inline-share-buttons"></div>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a73edc97d6e9100131b2337&product=custom-share-buttons"></script>
+<br /><br />
+<div class="fb-like" data-href="http://gokisoft.com/examination--test--quan-ly-sach-oop--java.html" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+<div class="fb-comments" data-href="http://gokisoft.com/examination--test--quan-ly-sach-oop--java.html" data-numposts="10" data-width="100%"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s);
+             js.id = id;
+              js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=1958502331079659&autoLogAppEvents=1';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+<div class="row table-responsive" style="margin-top: 20px;background-color: #eae8e8; padding: 15px">
+<div class="col-md-12">
+<h3 style="text-transform: uppercase; font-weight: bold; color: black">Chia sẻ từ lớp học</h3>
+</div>
+<div class="col-md-12" id="comments_id">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-10 col-lg-4 p-b-30">
+<div class="p-l-10 p-rl-0-sr991 p-t-70">
+<div class="p-b-23">
+<div class="how2 how2-cl4 flex-s-c">
+<h3 class="f1-m-2 cl3 tab01-title">
+Bài Tập Hôm Nay
+</h3>
+</div>
+<ul class="p-t-35">
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+1
+</div>
+<a href="https://gokisoft.com/javafree-lo-trinh-hoc-java-basic-toi-java-advanced.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="JavaFree- Lộ trình học Java Basic tới Java Advanced">JavaFree- Lộ trình học Java Basic tới Java Advanced
+</a>
+</li>
+</ul>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7242961778697092" data-ad-slot="3026237021"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="p-b-23">
+<div class="how2 how2-cl4 flex-s-c m-b-15">
+<h3 class="f1-m-2 cl3 tab01-title">
+Phân Loại Bài Viết
+</h3>
+</div>
+<ul class="p-t-15">
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+1
+</div>
+<a href="https://gokisoft.com/java-basic.htm?post_type=goi-y-muc-luc" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="01. Gợi Ý &amp; Mục Lục">Gợi Ý &amp; Mục Lục</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+2
+</div>
+<a href="https://gokisoft.com/java-basic.htm?post_type=ly-thuyet" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="02. Lý Thuyết">Lý Thuyết</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+3
+</div>
+<a href="https://gokisoft.com/java-basic.htm?post_type=bai-tap" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="03. Bài Tập">Bài Tập</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+4
+</div>
+<a href="https://gokisoft.com/java-basic.htm?post_type=examination-test" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="04. Examination &amp; Test">Examination &amp; Test</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+5
+</div>
+<a href="https://gokisoft.com/java-basic.htm?post_type=source-code-chia-se" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="05. Source Code Chia Sẻ">Source Code Chia Sẻ</a>
+</li>
+</ul>
+</div>
+
+<div class="p-b-23">
+<div class="how2 how2-cl4 flex-s-c m-b-15">
+<h3 class="f1-m-2 cl3 tab01-title">
+Lọc Bài Viết Theo Chủ Đề
+</h3>
+</div>
+<div class="flex-wr-s-s m-rl--5">
+<ul class="p-t-15" style="width: 100% !important;">
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+1
+</div>
+<a href="https://gokisoft.com/java-basic/tag/01-Gi%E1%BB%9Bi-thi%E1%BB%87u-v%E1%BB%81-java-basic" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="01. Giới thiệu về java basic">01. Giới thiệu về java basic</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+2
+</div>
+<a href="https://gokisoft.com/java-basic/tag/02-Bi%E1%BA%BFn-+-To%C3%A1n-T%E1%BB%AD-+-M%E1%BB%87nh-%C4%90%E1%BB%81-%C4%90i%E1%BB%81u-Ki%E1%BB%87n" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="02. Biến + Toán Tử + Mệnh Đề Điều Kiện">02. Biến + Toán Tử + Mệnh Đề Điều Kiện</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+3
+</div>
+<a href="https://gokisoft.com/java-basic/tag/03-Loop-%28For-While-Do-While%29" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="03. Loop (For - While - Do .. While)">03. Loop (For - While - Do .. While)</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+4
+</div>
+<a href="https://gokisoft.com/java-basic/tag/04-STRING-&amp;-ARRAY-TRONG-JAVA" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="04. STRING &amp; ARRAY TRONG JAVA">04. STRING &amp; ARRAY TRONG JAVA</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+5
+</div>
+<a href="https://gokisoft.com/java-basic/tag/05-Exception" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="05. Exception">05. Exception</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+6
+</div>
+<a href="https://gokisoft.com/java-basic/tag/06-OOP-Basic" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="06. OOP Basic">06. OOP Basic</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+7
+</div>
+<a href="https://gokisoft.com/java-basic/tag/07-OOP-Advanced-%28Interface%29" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="07. OOP Advanced (Interface)">07. OOP Advanced (Interface)</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+8
+</div>
+<a href="https://gokisoft.com/java-basic/tag/08-Overview-Java-Basic" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="08. Overview Java Basic">08. Overview Java Basic</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+9
+</div>
+<a href="https://gokisoft.com/java-basic/tag/09-Examination-&amp;-Test" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="09. Examination &amp; Test">09. Examination &amp; Test</a>
+</li>
+</ul>
+</div>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7242961778697092" data-ad-slot="3026237021"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class="p-b-30">
+<div class="how2 how2-cl4 flex-s-c">
+<h3 class="f1-m-2 cl3 tab01-title">
+Danh Sách Bài Học
+</h3>
+</div>
+<ul class="p-t-35">
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+1
+</div>
+<a href="https://gokisoft.com/share-code-bai-giang-lap-trinh-oop-trong-java--ke-thua-trong-java--dong-goi-trong-java-lop-overview-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="[Share Code] Bài giảng lập trình OOP trong java + Kế thừa trong Java + Đóng gói trong Java - Lớp Overview Java">
+[Share Code] Bài giảng lập trình OOP trong java + Kế thừa trong Java + Đóng gói trong Java - Lớp Overview Java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+2
+</div>
+<a href="https://gokisoft.com/share-code-bai-giang-tinh-chat-da-hinh-trong-java--tinh-chat-truu-tuong-trong-java--interface-trong-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="[Share Code] Bài giảng tính chất đa hình trong Java + Tính chất trừu tượng trong Java + Interface trong Java">
+[Share Code] Bài giảng tính chất đa hình trong Java + Tính chất trừu tượng trong Java + Interface trong Java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+3
+</div>
+<a href="https://gokisoft.com/share-code-on-tap-buoi-1-nhap-xuat-scanner-trong-java-mang-trong-java-collection-trong-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="[Share Code] Ôn tập buổi 1 - Nhập xuất Scanner trong Java, Mảng trong Java, Collection trong Java">
+[Share Code] Ôn tập buổi 1 - Nhập xuất Scanner trong Java, Mảng trong Java, Collection trong Java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+4
+</div>
+<a href="https://gokisoft.com/share-code-thiet-ke-giao-dien-nhap-va-hien-thi-danh-sach-sinh-vien-java-lap-trinh-java-lop-on-tap-adf.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="[Share Code] Thiết kế giao diện nhập và hiển thị danh sách sinh viên Java - Lập Trình Java - Lớp Ôn Tập ADF">
+[Share Code] Thiết kế giao diện nhập và hiển thị danh sách sinh viên Java - Lập Trình Java - Lớp Ôn Tập ADF
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+5
+</div>
+<a href="https://gokisoft.com/01---huong-dan-cai-dat-moi-truong.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="001 - Hướng dẫn cài đặt môi trường">
+001 - Hướng dẫn cài đặt môi trường
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+6
+</div>
+<a href="https://gokisoft.com/02---huong-dan-tao-du-an-hello-world.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="002 - Hướng dẫn tạo dự án Hello World">
+002 - Hướng dẫn tạo dự án Hello World
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+7
+</div>
+<a href="https://gokisoft.com/03---khai-bao-bien--toan-tu-trong-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="003 - Khai báo biến &amp; Toán tử trong Java">
+003 - Khai báo biến &amp; Toán tử trong Java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+8
+</div>
+<a href="https://gokisoft.com/04---tim-hieu-ve-scanner-menh-de-dieu-kien-if-else-switch-trong-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="004 - Tìm hiểu về Scanner, mệnh đề điều kiền if, else, switch trong java">
+004 - Tìm hiểu về Scanner, mệnh đề điều kiền if, else, switch trong java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+9
+</div>
+<a href="https://gokisoft.com/01-huong-dan-cai-dat-moi-truong-lap-trinh-java-lap-trinh-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="01. Hướng dẫn cài đặt môi trường lập trình Java- lập trình Java">
+01. Hướng dẫn cài đặt môi trường lập trình Java- lập trình Java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+10
+</div>
+<a href="https://gokisoft.com/02-huong-dan-tao-du-an-java-dau-tien-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="02. Hướng dẫn tạo dự án Java đầu tiên - lập trình Java căn bản">
+02. Hướng dẫn tạo dự án Java đầu tiên - lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+11
+</div>
+<a href="https://gokisoft.com/03-khai-bao-bien--toan-tu-trong-java-llaapj-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="03. Khai báo biến &amp; toán tử trong Java - Lập trình Java căn bản">
+03. Khai báo biến &amp; toán tử trong Java - Lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+12
+</div>
+<a href="https://gokisoft.com/04-tim-hieu-ve-if-else-witch-trong-lap-trinh-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="04. Tìm hiểu về if, else, witch trong lập trình Java">
+04. Tìm hiểu về if, else, witch trong lập trình Java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+13
+</div>
+<a href="https://gokisoft.com/05-tim-hieu-loop-for-while-do-while-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="05. Tìm hiểu Loop (for, while, do while) - Lập trình Java căn bản">
+05. Tìm hiểu Loop (for, while, do while) - Lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+14
+</div>
+<a href="https://gokisoft.com/06-tim-hieu-ve-class-va-object-trong-lap-trinh-java-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="06. Tìm hiểu về Class và Object trong lập trình Java - Lập trình Java căn bản">
+06. Tìm hiểu về Class và Object trong lập trình Java - Lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+15
+</div>
+<a href="https://gokisoft.com/07-tim-hieu-ve-mang-array-va-list-arraylist-trong-java-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="07. Tìm hiểu về mảng (array) và List, ArrayList trong Java - Lập trình Java căn bản">
+07. Tìm hiểu về mảng (array) và List, ArrayList trong Java - Lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+16
+</div>
+<a href="https://gokisoft.com/08-huong-dan-phat-hanh-du-an-java-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="08. Hướng dẫn phát hành dự án java - Lập trình Java căn bản">
+08. Hướng dẫn phát hành dự án java - Lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+17
+</div>
+<a href="https://gokisoft.com/09-ke-thua-oop-lap-trinh-java-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="09. Kế thừa OOP - Lập trình java - Lập trình Java căn bản">
+09. Kế thừa OOP - Lập trình java - Lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+18
+</div>
+<a href="https://gokisoft.com/10-interface-oop-lap-trinh-java-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="10. Interface - OOP lập trình java - Lập trình Java căn bản">
+10. Interface - OOP lập trình java - Lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+19
+</div>
+<a href="https://gokisoft.com/bt01-chua-bai-tap-quan-ly-sinh-vien-lap-trinh-huong-doi-tuong-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="BT01. Chữa  bài tập quản lý sinh viên - lập trình hướng đối tượng java">
+BT01. Chữa bài tập quản lý sinh viên - lập trình hướng đối tượng java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+20
+</div>
+<a href="https://gokisoft.com/bt02-huong-dan-chua-bai-tap-quan-ly-sach-lap-trinh-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="BT02. Hướng dẫn chữa bài tập quản lý sách - lập trình java">
+BT02. Hướng dẫn chữa bài tập quản lý sách - lập trình java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+21
+</div>
+<a href="https://gokisoft.com/bt03-bai-tap-on-luyen-lap-trinh-oop--interface-lap-trinh-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="BT03. Bài tập ôn luyện lập trình OOP &amp; Interface - Lập trình Java">
+BT03. Bài tập ôn luyện lập trình OOP &amp; Interface - Lập trình Java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+22
+</div>
+<a href="https://gokisoft.com/bt04-chua-bai-tap-employee--studentmark--product-trong-lap-trinh-oop-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="BT04. Chũa bài tập Employee &amp; StudentMark &amp; Product trong lập trình OOP- lập trình Java căn bản">
+BT04. Chũa bài tập Employee &amp; StudentMark &amp; Product trong lập trình OOP- lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+23
+</div>
+<a href="https://gokisoft.com/bt05-chu-vi--dien-tich-hinh-tron-va-hinh-chu-nhat-lap-trinh-java-can-ban.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="BT05. Chu vi + Diện tích hình tròn và hình chữ nhật - lập trình Java căn bản">
+BT05. Chu vi + Diện tích hình tròn và hình chữ nhật - lập trình Java căn bản
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+24
+</div>
+<a href="https://gokisoft.com/bt06-chuong-trinh-quan-ly-thue-va-gia-oto-lap-trinh-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="BT06. chương trình quản lý thuế và giá oto - lập trình java">
+BT06. chương trình quản lý thuế và giá oto - lập trình java
+</a>
+</li>
+<li class="flex-wr-sb-s p-b-22">
+<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
+25
+</div>
+<a href="https://gokisoft.com/bt07-tao-chuong-trinh-tivi-bang-java-lap-trinh-java.html" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03" title="BT07. Tạo chương trình TIVI bằng java - Lập trình java">
+BT07. Tạo chương trình TIVI bằng java - Lập trình java
+</a>
+</li>
+</ul>
+<ul class="pagination" role="navigation">
+<li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Previous">
+<span class="page-link" aria-hidden="true">&lsaquo;</span>
+</li>
+<li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+<li class="page-item"><a class="page-link" href="https://gokisoft.com/examination--test--quan-ly-sach-oop--java.html?page=2">2</a></li>
+<li class="page-item"><a class="page-link" href="https://gokisoft.com/examination--test--quan-ly-sach-oop--java.html?page=3">3</a></li>
+<li class="page-item"><a class="page-link" href="https://gokisoft.com/examination--test--quan-ly-sach-oop--java.html?page=4">4</a></li>
+<li class="page-item"><a class="page-link" href="https://gokisoft.com/examination--test--quan-ly-sach-oop--java.html?page=5">5</a></li>
+<li class="page-item">
+<a class="page-link" href="https://gokisoft.com/examination--test--quan-ly-sach-oop--java.html?page=2" rel="next" aria-label="Next &raquo;">&rsaquo;</a>
+</li>
+</ul>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7242961778697092" data-ad-slot="3026237021"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="p-b-55">
+<div class="how2 how2-cl4 flex-s-c m-b-30">
+<h3 class="f1-m-2 cl3 tab01-title">
+Quick Quizzz!!!
+</h3>
+</div>
+<div class="flex-wr-s-s m-rl--5" style="background: #ecebeb; padding: 8px;">
+<div class="form-group" style="width: 100% !important;">
+<label>
+<img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&amp;d=mm&amp;r=g" class="user-image" alt="User Image" style="width: 35px !important" />
+<strong>TRẦN VĂN ĐIỆP</strong>
+<p>20:34 23/04/2020</p>
+<p style="font-weight: bold;">Bạn thích làm về mảng nào nhất?</p>
+</label>
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex; margin-top: 8px; margin-bottom: 8px;" onclick="switchQuiz(478, 0, 0)">
+<input type="checkbox" style="float: left; margin-top: 12px !important;" id="index0" index="0"><label style="float: left; margin-left: 10px; margin-top: -7px; cursor: pointer; border: solid 1px #f3f3f3; padding: 10px; margin-right: 10px" for="index0">Lập Trình Mobile Android</label> <img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" title="TRẦN VĂN ĐIỆP" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" title="Trần Văn Điêp" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/7e3a8fe30cedd711f426fc59a9d48efc.jpg?s=80&d=mm&r=g" title="Trần Anh Quân" class="user-image" alt="User Image" style="width: 35px !important" /><label class="numberCircle">+9</label>
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex; margin-top: 8px; margin-bottom: 8px;" onclick="switchQuiz(478, 1, 0)">
+<input type="checkbox" style="float: left; margin-top: 12px !important;" id="index1" index="1"><label style="float: left; margin-left: 10px; margin-top: -7px; cursor: pointer; border: solid 1px #f3f3f3; padding: 10px; margin-right: 10px" for="index1">Lập Trình Frontend</label> <img src="https://www.gravatar.com/avatar/7e3a8fe30cedd711f426fc59a9d48efc.jpg?s=80&d=mm&r=g" title="Trần Anh Quân" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/5db166b7b74443c5c221e4c0068d6da9.jpg?s=80&d=mm&r=g" title="Phí Văn Long" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/5a1d730aa7a3ff117afa545ea99d03f3.jpg?s=80&d=mm&r=g" title="Trần Tuấn Anh" class="user-image" alt="User Image" style="width: 35px !important" /><label class="numberCircle">+3</label>
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex; margin-top: 8px; margin-bottom: 8px;" onclick="switchQuiz(478, 2, 0)">
+<input type="checkbox" style="float: left; margin-top: 12px !important;" id="index2" index="2"><label style="float: left; margin-left: 10px; margin-top: -7px; cursor: pointer; border: solid 1px #f3f3f3; padding: 10px; margin-right: 10px" for="index2">Lập trình PHP/Laravel</label> <img src="https://www.gravatar.com/avatar/ae8d66100c882095c429167b0fc6737f.jpg?s=80&d=mm&r=g" title="TRẦN VĂN ĐIỆP" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/5db166b7b74443c5c221e4c0068d6da9.jpg?s=80&d=mm&r=g" title="Phí Văn Long" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/ee4661d1f9133c241d6c8287c7ea8ceb.jpg?s=80&d=mm&r=g" title="Trần Mạnh Dũng" class="user-image" alt="User Image" style="width: 35px !important" /><label class="numberCircle">+9</label>
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex; margin-top: 8px; margin-bottom: 8px;" onclick="switchQuiz(478, 3, 0)">
+<input type="checkbox" style="float: left; margin-top: 12px !important;" id="index3" index="3"><label style="float: left; margin-left: 10px; margin-top: -7px; cursor: pointer; border: solid 1px #f3f3f3; padding: 10px; margin-right: 10px" for="index3">Theo Java Web (SpringBoot, ...)</label> <img src="https://www.gravatar.com/avatar/98f1e29922dc48dd5d41b8f6cbce24e0.jpg?s=80&d=mm&r=g" title="Đỗ tuấn anh" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/d3627ce786997fab24d1b790c91c6368.jpg?s=80&d=mm&r=g" title="hoangkhiem" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/b8c48ea2d04ab5a37bda2c50310d8a5c.jpg?s=80&d=mm&r=g" title="cuonglee" class="user-image" alt="User Image" style="width: 35px !important" /><label class="numberCircle">+12</label>
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex; margin-top: 8px; margin-bottom: 8px;" onclick="switchQuiz(478, 4, 0)">
+<input type="checkbox" style="float: left; margin-top: 12px !important;" id="index4" index="4"><label style="float: left; margin-left: 10px; margin-top: -7px; cursor: pointer; border: solid 1px #f3f3f3; padding: 10px; margin-right: 10px" for="index4">Theo NodeJS</label> <img src="https://www.gravatar.com/avatar/114894070fbd15fc0c29ffdeab37f4b5.jpg?s=80&d=mm&r=g" title="Vũ Việt Đức" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/565f27ecffbed3df91d80c107af48418.jpg?s=80&d=mm&r=g" title="Nguyen Duc Viet" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/5a1d730aa7a3ff117afa545ea99d03f3.jpg?s=80&d=mm&r=g" title="Trần Tuấn Anh" class="user-image" alt="User Image" style="width: 35px !important" /><label class="numberCircle">+2</label>
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex; margin-top: 8px; margin-bottom: 8px;" onclick="switchQuiz(478, 5, 0)">
+<input type="checkbox" style="float: left; margin-top: 12px !important;" id="index5" index="5"><label style="float: left; margin-left: 10px; margin-top: -7px; cursor: pointer; border: solid 1px #f3f3f3; padding: 10px; margin-right: 10px" for="index5">Theo Ruby on Rail</label> <img src="https://www.gravatar.com/avatar/49c73db02b33c675d2086a8998a3ce70.jpg?s=80&d=mm&r=g" title="GokiSoft.Com" class="user-image" alt="User Image" style="width: 35px !important" />
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex; margin-top: 8px; margin-bottom: 8px;" onclick="switchQuiz(478, 6, 0)">
+<input type="checkbox" style="float: left; margin-top: 12px !important;" id="index6" index="6"><label style="float: left; margin-left: 10px; margin-top: -7px; cursor: pointer; border: solid 1px #f3f3f3; padding: 10px; margin-right: 10px" for="index6">Không biết gì để theo :D :P :D</label> <img src="https://www.gravatar.com/avatar/af7b1a912cb63a5c2d1432db54b2f2dd.jpg?s=80&d=mm&r=g" title="Trần Văn Điêp" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/ee4661d1f9133c241d6c8287c7ea8ceb.jpg?s=80&d=mm&r=g" title="Trần Mạnh Dũng" class="user-image" alt="User Image" style="width: 35px !important" /><img src="https://www.gravatar.com/avatar/76e646e11f1674fba03bddd0ae020813.jpg?s=80&d=mm&r=g" title="Hoàng Quang Huy" class="user-image" alt="User Image" style="width: 35px !important" /><label class="numberCircle">+12</label>
+</div>
+<a href="https://gokisoft.com/menu/quiz_list">>> Hiển Thị Quizzz</a>
+</div>
+</div>
+<div class="p-b-55" style="padding-top: 30px">
+<div class="how2 how2-cl4 flex-s-c m-b-30">
+<h3 class="f1-m-2 cl3 tab01-title">
+Theo Dõi Học Trên Gokisoft
+</h3>
+</div>
+<div class="flex-wr-s-s m-rl--5">
+<div class="textwidget">
+<div class="fb-page" data-href="https://www.facebook.com/gokisoft/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/gokisoft/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/gokisoft/">GokiSoft - Chia sẻ thông tin trong trường học, thầy cô giáo, v.v</a></blockquote></div>
+</div>
+<div id="fb-root"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="modal" id="import_code_modal" style="background: rgba(0, 0, 0, 0.5);">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h4 class="modal-title">Nhập source code của bạn</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<div class="modal-body">
+<div class="form-group">
+<textarea id="message" class="form-control" rows="8"></textarea>
+</div>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Huỷ</button>
+<button type="button" class="btn btn-success" data-dismiss="modal" onclick="import_code()">Hoàn Thành</button>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<footer>
+<div class="bg2 p-t-40 p-b-25">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 p-b-20">
+<div class="size-h-3 flex-s-c">
+<a href="https://gokisoft.com">
+<img style="height: 65px !important;" class="max-s-full" src="https://res.cloudinary.com/ziczacgroup/image/upload/v1587623413/qhwncq3wtjkrsyke6ayw.png" alt="LOGO">
+</a>
+</div>
+<div class="f1-s-1 cl11 p-b-16">
+<span style="color: #aaa;">Chúng tôi tạo ra website nay với mong muốn chia sẻ những kiến thức và kinh nghiệm thực tiễn mà chung tôi đã có được - nhằm giúp cho những bạn mới bắt đầu học lập trình trở nên dễ dàng hơn và có lộ trình học cụ thể &amp; rút ngắn thời gian học</span>
+</div>
+<p class="f1-s-1 cl11 p-b-16">
+Bạn có câu hỏi? Hãy email chúng tôi tại <a href="/cdn-cgi/l/email-protection#c1a6aeaaa8b2aea7b5efa2aeac81a6aca0a8adefa2aeac" class="email"><span class="__cf_email__" data-cfemail="4a2d25212339252c3e642925270a2d272b232664292527">[email&#160;protected]</span></a>
+</p>
+<div class="p-t-15">
+<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+<span class="fab fa-facebook-f"></span>
+</a>
+<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+<span class="fab fa-twitter"></span>
+</a>
+<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+<span class="fab fa-pinterest-p"></span>
+</a>
+<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+<span class="fab fa-vimeo-v"></span>
+</a>
+<a href="#" class="fs-18 cl11 hov-cl10 trans-03 m-r-8">
+<span class="fab fa-youtube"></span>
+</a>
+</div>
+</div>
+<div class="col-sm-6 col-lg-4 p-b-20">
+<div class="size-h-3 flex-s-c">
+<h5 class="f1-m-7 cl0" style="text-transform: uppercase;">
+Bài viết nổi bật
+</h5>
+</div>
+<ul>
+<li class="flex-wr-sb-s p-b-20">
+<a href="https://gokisoft.com/share-code-multithread-sinh-so-ngau-nhien-va-hien-thi-binh-phuong-so-ngau-nhien-synchronized-trong-java-on-tap-adf.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" alt="IMG">
+</a>
+<div class="size-w-5">
+<h6 class="p-b-5">
+<a href="https://gokisoft.com/share-code-multithread-sinh-so-ngau-nhien-va-hien-thi-binh-phuong-so-ngau-nhien-synchronized-trong-java-on-tap-adf.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+[Share Code] MultiThread - Sinh số ngẫu nhiên và hiển thị bình phương số ngẫu nhiên &amp; Synchronized trong Java - Ôn Tập ADF
+</a>
+</h6>
+<span class="f1-s-3 cl6">
+13-06-2020
+</span>
+</div>
+</li>
+<li class="flex-wr-sb-s p-b-20">
+<a href="https://gokisoft.com/share-code-tim-hieu-ve-thread-multithreading-synchronized-trong-java-lap-trinh-java.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" alt="IMG">
+</a>
+<div class="size-w-5">
+<h6 class="p-b-5">
+<a href="https://gokisoft.com/share-code-tim-hieu-ve-thread-multithreading-synchronized-trong-java-lap-trinh-java.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+[Share Code] Tìm hiểu về Thread - MultiThreading - Synchronized Trong Java - Lập trình java
+</a>
+</h6>
+<span class="f1-s-3 cl6">
+13-06-2020
+</span>
+</div>
+</li>
+<li class="flex-wr-sb-s p-b-20">
+<a href="https://gokisoft.com/examination--test--quan-ly-sinh-vien--kiem-tra-60-phut.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" alt="IMG">
+</a>
+<div class="size-w-5">
+<h6 class="p-b-5">
+<a href="https://gokisoft.com/examination--test--quan-ly-sinh-vien--kiem-tra-60-phut.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+Examination &amp; Test + Quản lý sinh viên + kiểm tra 60 phút
+</a>
+</h6>
+<span class="f1-s-3 cl6">
+13-06-2020
+</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-sm-6 col-lg-4 p-b-20">
+<div class="size-h-3 flex-s-c">
+<h5 class="f1-m-7 cl0" style="text-transform: uppercase;">
+Bài viết mới nhất
+</h5>
+</div>
+<li class="flex-wr-sb-s p-b-20">
+<a href="https://gokisoft.com/thread-thuc-hien-in-ngau-nhien-cac-so-nguyen-va-ky-tu.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" alt="IMG">
+</a>
+<div class="size-w-5">
+<h6 class="p-b-5">
+<a href="https://gokisoft.com/thread-thuc-hien-in-ngau-nhien-cac-so-nguyen-va-ky-tu.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+Thread thực hiện in ngẫu nhiên các số nguyên và ký tự
+</a>
+</h6>
+<span class="f1-s-3 cl6">
+13-06-2020
+</span>
+</div>
+</li>
+<li class="flex-wr-sb-s p-b-20">
+<a href="https://gokisoft.com/multithread-sinh-so-ngau-nhien-va-hien-thi-binh-phuong-so-ngau-nhien--synchronized-trong-java.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1583834689/vf4gyxt7gmthx4eykvlp.jpg" alt="IMG">
+</a>
+<div class="size-w-5">
+<h6 class="p-b-5">
+<a href="https://gokisoft.com/multithread-sinh-so-ngau-nhien-va-hien-thi-binh-phuong-so-ngau-nhien--synchronized-trong-java.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+MultiThread - Sinh số ngẫu nhiên và hiển thị bình phương số ngẫu nhiên &amp; Synchronized trong Java
+</a>
+</h6>
+<span class="f1-s-3 cl6">
+13-06-2020
+</span>
+</div>
+</li>
+<li class="flex-wr-sb-s p-b-20">
+<a href="https://gokisoft.com/php-superglobal--request.html" class="size-w-4 wrap-pic-w hov1 trans-03">
+<img src="https://res.cloudinary.com/ziczacgroup/image/upload/v1591021840/vph3t08fdjhuhixcqam0.png" alt="IMG">
+</a>
+<div class="size-w-5">
+<h6 class="p-b-5">
+<a href="https://gokisoft.com/php-superglobal--request.html" class="f1-s-5 cl11 hov-cl10 trans-03">
+PHP Superglobal - $_REQUEST
+</a>
+</h6>
+<span class="f1-s-3 cl6">
+13-06-2020
+</span>
+</div>
+</li>
+</div>
+</div>
+</div>
+</div>
+<div class="bg11">
+<div class="container size-h-4 flex-c-c p-tb-15">
+<span class="f1-s-1 cl0 txt-center">
+<a href="#" class="f1-s-1 cl10 hov-link1">
+Copyright &copy; 2019 All rights reserved
+</span>
+</div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-146138928-1"></script>
+<script>
+					  window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+					  gtag('js', new Date());
+					  gtag('config', 'UA-146138928-1');
+					</script>
+
+<script>
+					  !function(f,b,e,v,n,t,s)
+					  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+					  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+					  if(!f._fbq)f._fbq=n;
+						n.push=n;
+						n.loaded=!0;
+						n.version='2.0';
+						n.queue=[];
+						t=b.createElement(e);
+						t.async=!0;
+						t.src=v;
+						s=b.getElementsByTagName(e)[0];
+					  s.parentNode.insertBefore(t,s)}(window, document,'script',
+					  'https://connect.facebook.net/en_US/fbevents.js');
+					  fbq('init', '1217882781722846');
+					  fbq('track', 'PageView');
+					</script>
+<noscript><img height="1" width="1" style="display:none"
+					  src="https://www.facebook.com/tr?id=1217882781722846&ev=PageView&noscript=1"
+					/></noscript>
+ </footer>
+<div id="snackbar">Đã sao chép!!!</div>
+
+<div class="btn-back-to-top" id="myBtn">
+<span class="symbol-btn-back-to-top">
+<span class="fas fa-angle-up"></span>
+</span>
+</div>
+
+<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document" data-dismiss="modal">
+<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+<div class="wrap-video-mo-01">
+<div class="video-mo-01">
+<iframe src="https://www.youtube.com/embed/wJnBTPUQS5A?rel=0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://gokisoft.com/themes/gokisoft/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script src="https://gokisoft.com/themes/gokisoft/vendor/animsition/js/animsition.min.js"></script>
+
+<script src="https://gokisoft.com/themes/gokisoft/vendor/bootstrap/js/popper.js"></script>
+<script src="https://gokisoft.com/themes/gokisoft/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://gokisoft.com/themes/gokisoft-old/lib/rainbow/rainbow.min.js"></script>
+<script src="https://gokisoft.com/themes/gokisoft-old/lib/rainbow/language/javascript.js"></script>
+<script src="https://gokisoft.com/themes/gokisoft/js/main.js"></script>
+<script src="https://gokisoft.com/js/vendor/summernote.js"></script>
+<script type="text/javascript" src="https://gokisoft.com/js/upload/upload.js"></script>
+<script type="text/javascript" src="https://gokisoft.com/js/base64.js"></script>
+<script type="text/javascript">
+	var url_upload = 'https://api.cloudinary.com/v1_1/ziczacgroup/image/upload#h7sjrjob';
+
+	function sendCVPermission(idPost, status) {
+		$.get('https://gokisoft.com/mycomment/change?status='+status+'&idPost='+idPost, function() {
+			location.reload()
+		})
+	}
+
+	function filterGroup(groupName) {
+		document.cookie = 'currentGroup='+groupName
+		location.reload()
+	}
+
+	$('#description img').click(function() {
+		window.open($(this).attr('src'), '_self')
+	})
+
+	var deltaTime = -1
+	function viewCodeFromOther() {
+		$.get('https://gokisoft.com/view_comment_from_other?id=1136', function() {
+			deltaTime = 2 * 60 * 60;
+			countDownTimer()
+		})
+	}
+	setTimeout(function() {
+		if(deltaTime > 0) {
+			countDownTimer()
+		}
+	}, 500)
+
+	function countDownTimer() {
+		setInterval(function() {
+			deltaTime -= 1;
+			hour = parseInt(deltaTime / 3600);
+			minute = parseInt((deltaTime - hour * 3600) / 60);
+			second = deltaTime - hour * 3600 - minute * 60;
+			// console.log(hour + ',' + minute + ',' + second)
+			$('#view_code_id').html('Xem code sau >> ' + hour + ':' + minute + ':' + second)
+
+			if(deltaTime <= 0) {
+				location.reload()
+			}
+		}, 1000)
+	}
+
+	function removeComment(id) {
+		option = confirm('Bạn chắc chắn muốn xoá phản hồi này?')
+		if(option) {
+			$.get('https://gokisoft.com/remove_comment?id='+id, function() {
+				location.reload()
+			})
+		}
+	}
+
+	function postComment() {
+		if($($("#summernote").summernote("code")).text() == '') {
+			alert('Bạn cần nhập nội dung phản hồi trước khi gửi !');
+			return;
+		}
+
+		if($('#fullname').val() == '' || $('#phone_number').val() == '' || $('#email').val() == '') {
+			alert('Thông tin cá nhân không được để trống !');
+			return;
+		}
+
+		$.post("https://gokisoft.com/post/comment",
+		  {
+		    id_product: 0,
+		    id_news: 1136,
+		    fullname: $('#fullname').val(),
+		    email: $('#email').val(),
+		    phone_number: $('#phone_number').val(),
+		    comment: $('#summernote').val(),
+		    _token: $('[name=_token]').val()
+		  },
+		  function(data, status){
+		  	$('#alert_div').show()
+		  	$('#alert_div').append('<p style="color: red">Chúng tôi đã nhận được phản hồi từ bạn - chúng tôi sẽ duyệt trước khi phản hồi hiển thị trên mục này</p>')
+		  	setTimeout(function() {
+		  		location.reload()
+		  	}, 2000)
+		  });
+	}
+
+	function filterByTags(tagName) {
+		tagName = remove_unicode(tagName)
+		$('[name=tagFilter]').each(function() {
+			if($(this).attr('data').includes(tagName)) {
+				$(this).show()
+			} else {
+				$(this).hide()
+			}
+		})
+	}
+
+	function remove_unicode(str)
+	{
+	   str= str.toLowerCase();
+	   str= str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a");
+	   str= str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e");
+	   str= str.replace(/ì|í|ị|ỉ|ĩ/g,"i");
+	   str= str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o");
+	   str= str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u");
+	   str= str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y");
+	   str= str.replace(/đ/g,"d");
+	   // str= str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'| |\"|\&|\#|\[|\]|~|$|_/g,"-");
+
+	   // str= str.replace(/-+-/g,"-"); //thay thế 2- thành 1-
+	   // str= str.replace(/^\-+|\-+$/g,"");
+
+	   return str;
+	}
+</script>
+<script type="text/javascript">
+	$("pre.prettyprint").each(function() {
+        var html = $(this).html()//.replace("; ", ";\n")
+        // html = html.replace(";", ";\n")
+        // html = tidy_html5(html, options);
+        $(this).html('<code data-language="java">'+html+'</code>')
+      })
+
+      $(".w3-code").each(function(index) {
+        var content = $(this).html().split('<br>').join("\n");
+        // $(this).html(content);
+        // console.log(content)
+        content = strip_html_tags(content)
+        $(this).html('<pre><code class="language-js">'+content+'</code></pre>');
+      })
+
+      $("pre").each(function(index) {
+        $(this).attr('id', 'code_' + index)
+
+        if($(this).attr('filename') != null && ($(this).attr('filename').endsWith('.html') || $(this).attr('filename').endsWith('.htm'))) {
+
+         var parentclosest = $(this).closest('[name=comment_child]')
+         if(parentclosest.length > 0) {
+         	url = '//gokisoft.com/examination--test--quan-ly-sach-oop--java/comment/'+$(parentclosest[0]).attr('value')
+         } else {
+         	url = '//gokisoft.com/examination--test--quan-ly-sach-oop--java/demo';
+         }
+
+          $(this).before("<span class='badge badge-info' style='cursor: pointer;font-size: 12px;' id='label_"+index+"' onclick='toggle_code(" +index+")'>Ẩn Code</span>&nbsp;&nbsp;<span class='badge badge-danger' id='copy_"+index+"' style='cursor: pointer;font-size: 12px;' onclick='copyDivToClipboard(\"code_" +index+"\")'>Copy Code</span>&nbsp;&nbsp;<a href='"+url+"/"+$(this).attr('filename')+"' target='_blank'><span class='badge badge-success' style='cursor: pointer;font-size: 12px;'>Xem Demo</span></a>")
+        } else {
+          $(this).before("<span class='badge badge-info' style='cursor: pointer;font-size: 12px;' id='label_"+index+"' onclick='toggle_code(" +index+")'>Ẩn Code</span>&nbsp;&nbsp;<span class='badge badge-danger' id='copy_"+index+"' style='cursor: pointer;font-size: 12px;' onclick='copyDivToClipboard(\"code_" +index+"\")'>Copy Code</span>")
+        }
+
+        if($(this).attr('filename') != null && ($(this).attr('filename').endsWith('.css') || $(this).attr('filename').endsWith('.css.map'))) {
+          toggle_code(index)
+        }
+      })
+
+  function toggle_code(index) {
+    // alert(index)
+    $("#code_"+index).toggle()
+    $("#copy_"+index).toggle()
+    if($("#code_"+index).is(':visible')) {
+      $("#label_"+index).html("Ẩn Code")
+    } else {
+      $("#label_"+index).html("Hiển Thị Code")
+    }
+  }
+</script>
+<script>
+    	function import_code() {
+		      var message = $("#message").val();
+
+		      $("#summernote").summernote('code', $("#summernote").summernote('code') + '<br/><pre><code class="language-js">'+escapeHtml(message)+'</code></pre><br/><br/>')
+
+		      $("#message").val("");
+		  }
+
+		function escapeHtml(text) {
+		    var map = {
+		      '&': '&amp;',
+		      '<': '&lt;',
+		      '>': '&gt;',
+		      '"': '&quot;',
+		      "'": '&#039;'
+		    };
+
+		    return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+		  }
+
+    	$(function(){
+    		//editor setup
+			$('#summernote').summernote({
+				height: 100,
+				toolbar: [
+				    ['font', ['bold', 'italic', 'underline', 'clear']],
+				    ['fontsize', ['fontsize']],
+				    ['color', ['color']],
+				    ['para', ['ul', 'ol', 'paragraph']],
+				    ['table', ['table']],
+				    ['insert', ['link', 'picture', 'video']]
+				  ],
+				callbacks: {
+					onInit: function() {
+				      // Add "open" - "save" buttons
+				      var noteBtn = '<button data-toggle="modal" data-target="#import_code_modal" type="button" class="btn btn-default btn-sm btn-small" title="Add Code" data-event="something" tabindex="-1"><i class="fa fa-file-text"></i></button>';
+				      var fileGroup = '<div class="note-file btn-group">' + noteBtn + '</div>';
+				      $(fileGroup).appendTo($('.note-toolbar'));
+				      // Button tooltips
+				      $('#makeSnote').tooltip({
+				        container: 'body',
+				        placement: 'bottom'
+				      });
+				    },
+				    onBlur: function() {
+	                  // $('#yourInfor').show()
+	                }
+				}
+			});
+
+			$('.note-popover').hide()
+
+			// process tags
+			tags = 'C1907L,T1907A,JavaFree,09. Examination &amp; Test'.toLowerCase()
+			tags = tags.split(',')
+			if(tags != null && tags.length > 0) {
+				$('[name=className]').each(function() {
+					className = $(this).val().toLowerCase()
+					if(tags.indexOf(className) >= 0) {
+						$(this).prop('checked', true)
+					}
+				})
+			}
+
+			$('[name=className]').change(function() {
+				if($(this).prop('checked')) {
+					// console.log('checked >> ' + $(this).val())
+					quickSetting('tags', 'add', $(this).val())
+				} else {
+					// console.log('unchecked >> ' + $(this).val())
+					quickSetting('tags', 'remove', $(this).val())
+				}
+			})
+
+			$('#Highlight').change(function() {
+				quickSetting('Highlight', '', $(this).val())
+			})
+
+			$('#is_view_comment').change(function() {
+				quickSetting('is_view_comment', '', $(this).val())
+			})
+
+			$('#Highlight').val(0)
+			$('#is_view_comment').val(1)
+
+			$('#import_code_files').change(function(e) {
+				console.log('change.........')
+				if ( ! window.FileReader ) {
+					return console.log('FileReader API is not supported by your browser.');
+				}
+				// console.log($(this).val())
+				input = e.target; // Getting the element from jQuery
+				if ( input.files && input.files[0] ) {
+					fileList = input.files
+					index = 0
+
+					readFile()
+				} else {
+					// Handle errors here
+					console.log('File not selected or browser incompatible.')
+				}
+			})
+		});
+
+		function quickSetting(fieldName, action, value) {
+			$.get('https://gokisoft.com/admin/quick/setting?id='+1136+'&fieldName='+fieldName+'&action='+action+'&value='+value, function(data) {
+				location.reload()
+			})
+		}
+
+		var fileList = null;
+    	var index = 0;
+
+		function readFile() {
+			if(index >= fileList.length) {
+				return;
+			}
+
+			file = fileList[index]
+			index++
+
+			var allowedExtension = ['.jpeg', '.jpg', '.png', '.gif', '.bmp'];
+			for (var i = 0; i < allowedExtension.length; i++) {
+				if(file.name.endsWith(allowedExtension[i])) {
+					uploadURLCloudinary(file, null, function(url) {
+						$("#summernote").summernote('code', $("#summernote").summernote('code') + '<h1>#'+file.name+'</h1><br/><pre filename="'+file.name+'" type="image" data="sample"><code class="language-js">'+url+'</code></pre><br/><br/>')
+
+						readFile()
+					})
+					return;
+				}
+			}
+
+			fr = new FileReader(); // FileReader instance
+			fr.onload = function () {
+				// Do stuff on onload, use fr.result for contents of file
+				// console.log(fr.result)
+				// console.log(file)
+				// content = fr.result.replace('data:text/plain;base64,', '')
+				// content = content.replace('data:application/octet-stream;base64,', '')
+				content = fr.result.split(',')
+				if(content.length > 1) {
+					content = content[1]
+				} else {
+					content = content[0]
+				}
+				content = Base64.decode(content)
+				$("#summernote").summernote('code', $("#summernote").summernote('code') + '<h2>#'+file.name+'</h2><br/><pre filename="'+file.name+'" type="code" data="sample"><code class="language-js">'+escapeHtml(content)+'</code></pre><br/><br/>')
+
+				readFile()
+			};
+			//fr.readAsText( file );
+			fr.readAsDataURL( file );
+		}
+
+		function uploadAllFiles() {
+			$('#import_code_files').click()
+		}
+    </script>
+<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "420px";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+<script type="text/javascript">
+    // $(function() {
+
+        var h1Tags = jQuery('h1')
+        var menuContent = ''
+        for (var i = 0; i < h1Tags.length; i++) {
+            if(jQuery(h1Tags[i]).text().startsWith('#')) {
+                title = jQuery(h1Tags[i]).text().trim()
+                title = title.replace(/\*+$/,' ');
+                if(jQuery(h1Tags[i]).text().trim().startsWith('##')) {
+                    title = title.replace(/#/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+                } else {
+                    title = title.replace(/#/g, '');
+                }
+
+                htmlDemo = ''
+                if(title.includes('.htm')) {
+                  var parentclosest = $(this).closest('[name=comment_child]')
+                  if(parentclosest.length > 0) {
+                    url = '//gokisoft.com/examination--test--quan-ly-sach-oop--java/comment/'+$(parentclosest[0]).attr('value')
+                  } else {
+                    url = '//gokisoft.com/examination--test--quan-ly-sach-oop--java/demo';
+                  }
+                  htmlDemo = "&nbsp;&nbsp;<a href='"+url+"/"+title+"' target='_blank'><span class='badge badge-success' style='cursor: pointer;font-size: 12px;'>Xem Demo</span></a>";
+                }
+
+                param = remove_unicode(jQuery(h1Tags[i]).text().replace(/#/g, '').toLowerCase())
+                menuContent += '<li style="list-style-type: none;"><a style="text-decoration:none" href="#'+param+'" onclick="scrollToTarget(\''+param+'\')">'+title + htmlDemo +'</a></li>';
+
+                if(jQuery(h1Tags[i]).text().trim().endsWith('*')) {
+                  title = jQuery(h1Tags[i]).html()
+                  title = title.replace(/#/g, '');
+                  title = title.replace(/\*/g, ' ');
+                  jQuery(h1Tags[i]).html(title + '<a style="color: black; color: 12pt;" href="#menu_post" onclick="scrollToTarget(\'menu_post\')"> >> Xem menu bài viết</a>')
+                } else {
+                  title = jQuery(h1Tags[i]).html()
+                  title = title.replace(/#/g, '');
+                  jQuery(h1Tags[i]).html(title)
+                }
+
+                jQuery(h1Tags[i]).attr('id', param)
+            }
+        }
+
+        if(menuContent != '') {
+            jQuery('#menu_post_div').show()
+            jQuery('#menu_post').append(menuContent)
+        }
+    // })
+
+    function scrollToTarget(target) {
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#"+target).offset().top
+        }, 600);
+    }
+
+    function remove_unicode(str)
+    {
+       str= str.toLowerCase();
+       str= str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a");
+       str= str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e");
+       str= str.replace(/ì|í|ị|ỉ|ĩ/g,"i");
+       str= str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o");
+       str= str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u");
+       str= str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y");
+       str= str.replace(/đ/g,"d");
+       str= str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'| |\"|\&|\#|\[|\]|~|$|_/g,"-");
+
+       str= str.replace(/-+-/g,"-"); //thay thế 2- thành 1-
+       str= str.replace(/^\-+|\-+$/g,"");
+
+       str = str.replace(/\s/g,'');
+       return str;
+    }
+</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+ js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+  function copyDivToClipboard(id) {
+    // var range = document.getSelection().getRangeAt(0);
+    // range.selectNode(document.getElementById(id));
+    // window.getSelection().addRange(range);
+    // document.execCommand("copy")
+    var text = $("#"+id).text();
+
+    var dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.innerHTML = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+    </script>
+
+<style type="text/css">
+  .quiz_answer_content:empty:before {
+    content:attr(data-placeholder);
+    color:gray
+  }
+
+  .tag.label.label-info {
+    background: #f0ad4e !important;
+    border-color: #eea236 !important;
+    padding: 3px !important;
+  }
+
+  .bootstrap-tagsinput {
+    width: 100% !important;
+  }
+
+  .numberCircle {
+      float: left;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 5px;
+      background: #fff;
+      border: 2px solid grey;
+      color: grey;
+      text-align: center;
+      font-weight: bold;
+  }
+</style>
+<link rel="stylesheet" href="https://gokisoft.com/vendor/TagJs/bootstrap-tagsinput.css">
+<script src="https://gokisoft.com/vendor/TagJs/bootstrap-tagsinput.js"></script>
+<div class="modal" id="quiz" style="background: rgba(0, 0, 0, 0.5);">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<h4 class="modal-title" style="text-transform: uppercase; color: red !important;">Tạo câu hỏi (Quizzz)</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<div class="modal-body" id="quiz_answer_content_group">
+<div class="form-group">
+<label>Câu hỏi</label>
+<input type="text" name="quiz_title" class="form-control" placeholder="Nhập câu hỏi vào đây ..." style="border: none !important;">
+</div>
+<div class="form-group">
+<label>Đáp Án (Đáp án rỗng sẽ không hiển thị)</label>
+</div>
+<div class="checkbox" name="quiz_answer" style="display: flex;">
+<input type="checkbox" style="float: left;"><label contenteditable="true" name="quiz_answer_content" class="quiz_answer_content" style="float: left;min-width: 60% !important; margin-left: 10px; margin-top: -7px" onkeyup="onkeyupQuiz()" data-placeholder="Vào đáp án ..."></label>
+</div>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label>Tags:</label>
+<input type="text" name="tags" class="form-control tagsInput" data-role="tagsinput" width="100% !important;" placeholder="Nhập tags vào đây ..." style="border: none !important;">
+</div>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Huỷ</button>
+<button type="button" class="btn btn-success" data-dismiss="modal" onclick="submitQuiz()">Hoàn Thành</button>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+  function onkeyupQuiz() {
+    var answers = jQuery('[name=quiz_answer_content]')
+    var isAddMore = true;
+    for (var i = 0; i < answers.length; i++) {
+      if($(answers[i]).html().length == 0 || $(answers[i]).html().includes('Vào đáp')) {
+        isAddMore = false;
+        break;
+      }
+    }
+    if(isAddMore) {
+      $('#quiz_answer_content_group').append(`<div class="checkbox" name="quiz_answer" style="display: flex;">
+          <input type="checkbox" style="float: left;"><label contenteditable="true" name="quiz_answer_content" style="float: left;min-width: 60% !important; margin-left: 10px; margin-top: -7px" onkeyup="onkeyupQuiz()" data-placeholder="Vào đáp án ..." class="quiz_answer_content"></label>
+        </div>`)
+    }
+  }
+
+  function submitQuiz() {
+    if($('[name=quiz_title]').val() == '') {
+      alert('Không được để trống tiêu đề Quiz.')
+      return;
+    }
+    var content = []
+    var answers = jQuery('[name=quiz_answer_content]')
+    for (var i = 0; i < answers.length; i++) {
+      if($(answers[i]).html().length == 0 || $(answers[i]).html().includes('Vào đáp')) {
+      } else {
+        content.push($(answers[i]).html())
+      }
+    }
+    if(content.length == 0) {
+      alert('Quiz của bạn không có đáp án nào.')
+      return;
+    }
+    content = JSON.stringify(content)
+
+    $.post('https://gokisoft.com/menu/add_menu_expand_content', {
+      content_id: '',
+      id: 473,
+      _token: "UEwotEd78aS7fl8FLGnp0UA1jTQ97uuHUV6yia5m",
+      title: $('[name=quiz_title]').val(),
+      tags: $('[name=tags]').val(),
+      content: content
+    }, function(data) {
+      location.reload()
+    })
+  }
+
+  function switchQuiz(id, index, status) {
+    $.get('https://gokisoft.com/menu/switch_quiz?id='+id+'&index='+index+'&status='+status, function(data) {
+      location.reload()
+    })
+  }
+
+  function deleteBrand(id) {
+    option = confirm('Bạn chắc chắn muốn xoá menu này không?')
+    if(option) {
+      $.post("https://gokisoft.com/menu/delete_menu_expand_content",
+      {
+          _token: "UEwotEd78aS7fl8FLGnp0UA1jTQ97uuHUV6yia5m",
+          id: id,
+      },
+      function(data, status){
+        location.reload()
+      });
+    }
+  }
+</script></body>
+</html>
